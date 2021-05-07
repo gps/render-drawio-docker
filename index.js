@@ -79,11 +79,11 @@ async function run() {
   }
 
   try {
-    const branch = getBranchName();
-    if (!branch) {
-      return;
-    }
-    const git = await checkoutToBranch(branch, token);
+    // const branch = getBranchName();
+    // if (!branch) {
+    //   return;
+    // }
+    // const git = await checkoutToBranch(branch, token);
 
     const drawIOFiles = getDrawIOFiles(".");
     const renderedFiles = [];
