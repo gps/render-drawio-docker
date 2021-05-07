@@ -91,7 +91,7 @@ async function run() {
     for (const df of drawIOFiles) {
       core.info(`Rendering ${df}`);
       const rf = df.replace(".drawio", ".png");
-      await exec.exec("./node_modules/draw.io-export/bin/drawio.js", [
+      await exec.exec("/workdir/node_modules/draw.io-export/bin/drawio.js", [
         df,
         "-o",
         rf,
