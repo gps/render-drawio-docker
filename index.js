@@ -101,15 +101,15 @@ async function run() {
 
     core.info(`Rendered: ${renderedFiles}`);
 
-    if (renderedFiles) {
-      await core.group("push changes", async () => {
-        await git.addConfig("user.email", `actions@github.com`);
-        await git.addConfig("user.name", "GitHub Actions");
-        await git.add(renderedFiles);
-        await git.commit(commitMessage);
-        await git.push("repo", branch);
-      });
-    }
+    // if (renderedFiles) {
+    //   await core.group("push changes", async () => {
+    //     await git.addConfig("user.email", `actions@github.com`);
+    //     await git.addConfig("user.name", "GitHub Actions");
+    //     await git.add(renderedFiles);
+    //     await git.commit(commitMessage);
+    //     await git.push("repo", branch);
+    //   });
+    // }
   } catch (error) {
     core.setFailed(error);
   }
