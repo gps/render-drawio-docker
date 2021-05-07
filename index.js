@@ -85,7 +85,7 @@ async function run() {
     // }
     // const git = await checkoutToBranch(branch, token);
 
-    const drawIOFiles = getDrawIOFiles(".");
+    const drawIOFiles = getDrawIOFiles("/github/workspace");
     const renderedFiles = [];
 
     for (const df of drawIOFiles) {
