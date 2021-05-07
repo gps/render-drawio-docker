@@ -1,27 +1,40 @@
 # render-drawio
 
+GitHub Action that looks for drawio files in a repo, and renders PNGs of each of them in place.
+
 ## Inputs
 
-### `input-1`
+### `GH_TOKEN`
 
--  The name of the person.
--  Default - `David Beckham`.
--  Optional input value.
+The GitHub token used to authenticate with GitHub.
 
-### `input-2`
+**Required**
 
-- Provide addtional information regarding user.
-- Required field.
+### `IGNORE_FILE_PATTERNS`
 
-## Outputs
+Paths to not render.
 
-### `time`
+**Optional**
 
-The time when this action was performed.
+### `COMMIT_MESSAGE`
 
-## Example usage
+Commit message to post when rendering PNGs.
 
-uses: actions/render-drawio@master
-with:
-  input-1: 'Lionel Messi'
-  input-2: 'Argentina professional football player'
+**Required**
+
+**Default Value**
+
+If unspecified, it defaults to the following message:
+
+```
+Render diagrams
+```
+
+## Example Usage
+
+```yml
+- name: Render DrawIO Diagrams
+  uses: gps/render-drawio@master
+  with:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```

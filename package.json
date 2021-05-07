@@ -1,0 +1,24 @@
+{
+  "name": "render-drawio",
+  "version": "1.0.0",
+  "description": "Looks for drawio files in a repo, and renders PNGs of each of them in place.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surya-soft/render-drawio"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/surya-soft/render-drawio"
+  },
+  "homepage": "https://github.com/surya-soft/render-drawio",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/exec": "^1.0.4",
+    "@actions/github": "^4.0.0",
+    "draw.io-export": "^0.1.1",
+    "simple-git": "^2.38.0"
+  }
+}
